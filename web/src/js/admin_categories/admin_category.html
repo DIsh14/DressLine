@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">Administrator section</div>
+            <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation"><a href="#/adminCategories"><i class="fa fa-list"></i> Categories</a></li>
+                    <li role="presentation"><a href="#/adminManagers"><i class="fa fa-list"></i> Managers</a></li>
+                    <li role="presentation"><a href="#/" ng-click="logOut()"><i class="fa fa-sign-out"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="well">
+            <h1>All categories</h1>
+            <hr>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Subсategory name</th>
+                            <th>Department</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th># 12</th>
+                            <td>Clothing</td>
+                            <td>Dresses</td>
+                            <td>Women</td>
+                            <td><a href="#/adminCategory" class="btn btn-primary btn-sm">Edit</a></td>
+                            <td><a href="" class="btn btn-danger btn-sm">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <th># 13</th>
+                            <td>Shoes</td>
+                            <td>Boots</td>
+                            <td>Women</td>
+                            <td><a href="#/adminCategory" class="btn btn-primary btn-sm">Edit</a></td>
+                            <td><a href="" class="btn btn-danger btn-sm">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <th># 14</th>
+                            <td>Clothing</td>
+                            <td>Knitwear</td>
+                            <td>Women</td>
+                            <td><a href="#/adminCategory" class="btn btn-primary btn-sm">Edit</a></td>
+                            <td><a href="" class="btn btn-danger btn-sm">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <th># 15</th>
+                            <td>Clothing</td>
+                            <td>Jeans</td>
+                            <td>Men</td>
+                            <td><a href="#/adminCategory" class="btn btn-primary btn-sm">Edit</a></td>
+                            <td><a href="" class="btn btn-danger btn-sm">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <th># 16</th>
+                            <td>Clothing</td>
+                            <td>Shirts</td>
+                            <td>Men</td>
+                            <td><a href="#/adminCategory" class="btn btn-primary btn-sm">Edit</a></td>
+                            <td><a href="" class="btn btn-danger btn-sm">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-9">
+                    <a href="#/adminCategory" class="btn btn-success">Add category</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

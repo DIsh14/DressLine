@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">Customer section</div>
+            <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation"><a href="#/customerOrders"><i class="fa fa-list"></i> My orders</a></li>
+                    <li role="presentation"><a href="#/wishList"><i class="fa fa-heart"></i> My wishlist</a></li>
+                    <li role="presentation"><a href="#/userProfile"><i class="fa fa-user"></i> My account</a></li>
+                    <li role="presentation"><a href="#/" ng-click="logOut()"><i class="fa fa-sign-out"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="well">
+            <h1>Order #12</h1>
+            <p class="lead">Order #12 was placed on <strong>7/29/2016</strong> and is currently <strong>Being prepared</strong></p>
+            <p class="text-muted">If you have any questions, please feel free to <a href="#/aboutus">contact us</a>, our customer service center is working for you 24/7.</p>
+            <hr>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Product</th>
+                            <th>Quantity</th>
+                            <th>Item price</th>
+                            <th>Discount</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="#/product"><img class="order-detail-img" src="src/img/women_main_1.jpg"></a>
+                            </td>
+                            <td>
+                                <a href="#/product">White Blouse Armani</a>
+                            </td>
+                            <td>2</td>
+                            <td>123.00 UAH</td>
+                            <td>0.00 UAH</td>
+                            <td>246.00 UAH</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#/product"><img class="order-detail-img" src="src/img/women_main_1.jpg"></a>
+                            </td>
+                            <td>
+                                <a href="#/product">White Blouse Armani</a>
+                            </td>
+                            <td>3</td>
+                            <td>223.00 UAH</td>
+                            <td>0.00 UAH</td>
+                            <td>446.00 UAH</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="5" class="text-right">Order subtotal</th>
+                            <th>750 UAH</th>
+                        </tr>
+                        <tr>
+                            <th colspan="5" class="text-right">Shipping and handling</th>
+                            <th>10 UAH</th>
+                        </tr>
+                        <tr>
+                            <th colspan="5" class="text-right">Total</th>
+                            <th>760 UAH</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="row addresses">
+                <div class="col-md-6 col-md-offset-6">
+                    <h2>Shipping address</h2>
+                    <p>Denys Ischenko
+                        <br>16, Naukova st.
+                        <br>Lviv
+                        <br>Lviv region
+                        <br>Ukraine
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

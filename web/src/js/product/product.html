@@ -1,0 +1,144 @@
+<!--product-->
+<div class="container" ng-controller="productController">
+    <div class="row">
+
+        <ul class="breadcrumb">
+            <li><a href="#/">Home</a> <span class="divider"></span></li>
+            <li><a href="#/categories">Men</a> <span class="divider"></span></li>
+            <li><a href="#/categories">Category Example</a> <span class="divider"></span></li>
+            <li class="active">Product Exapmle</li>
+        </ul>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <img class="img-responsive" src="src/img/women_main_1.jpg" style="outline: 1px solid #dad2d2" alt="">
+        </div>
+        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+            <img class="img-responsive" src="src/img/women_prod_1_small.jpg" style="outline: 1px solid #dad2d2" alt="">
+            <div style="margin-top:6px">
+                <img class="img-responsive" src="src/img/women_prod_1_small.jpg" style="outline: 1px solid #dad2d2" alt="">
+            </div>
+            <div style="margin-top:6px">
+                <img class="img-responsive" src="src/img/women_prod_1_small.jpg" style="outline: 1px solid #dad2d2" alt="">
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <h4>DressLine - Product Name</h4>
+            <h4 class="text text-success">Price: 1000 UAH</h4>
+            <a href="#/wishList" class="btn btn-primary pull-right"><b>Add to Wishlist</b></a>
+            <h4><span class="label">3 in Stock</span></h4>
+            <hr>
+            <h4>Size</h4>
+            <div class="btn-group-sm" role="group" aria-label="4px">
+                <button type="button" class="btn btn-default">XS</button>
+                <button type="button" class="btn btn-default">S</button>
+                <button type="button" class="btn btn-default">M</button>
+                <button type="button" class="btn btn-default">L</button>
+                <button type="button" class="btn btn-default">XL</button>
+                <button type="button" class="btn btn-default">XXL</button>
+            </div>
+            <h4>Color</h4>
+            <div class="btn-group-lg" role="group" aria-label="4px">
+                <button type="button" class="btn btn-default"></button>
+                <button type="button" class="btn btn-primary"></button>
+                <button type="button" class="btn btn-success"></button>
+                <button type="button" class="btn btn-danger"></button>
+            </div>
+            <hr>
+            <div>
+                <h4>Description</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="ratings">
+                <p class="pull-right">3 reviews</p>
+                <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span> 4.0 stars
+                </p>
+            </div>
+            <hr>
+            <div class="dropdown">
+                <span class="qua">Quantity </span>
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">1
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                </ul>
+                <a href="#/cart" class="pull-right btn btn-success"><b>Add to Cart</b></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <ng-include src="'src/js/recentlyViewedItems/recentlyViewedItems.html'"></ng-include>
+    <hr>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h3>People also buy with this</h3>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top category_product" src="src/img/women_main_1.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Some product name</h4>
+                        <p class="card-text">Some general description abot this amazing product.</p>
+                        <h5 class="text text-success">1000 UAH
+                <input type="button" class="btn btn-info btn-sm pull-right" value="View More">
+              </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top category_product" src="src/img/women_main_1.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Some product name</h4>
+                        <p class="card-text">Some general description abot this amazing product.</p>
+                        <h5 class="text text-success">1000 UAH
+                  <input type="button" class="btn btn-info btn-sm pull-right" value="View More">
+                </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top category_product" src="src/img/women_main_1.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Some product name</h4>
+                        <p class="card-text">Some general description abot this amazing product.</p>
+                        <h5 class="text text-success">1000 UAH
+                    <input type="button" class="btn btn-info btn-sm pull-right" value="View More">
+                  </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top category_product" src="src/img/women_main_1.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Some product name</h4>
+                        <p class="card-text">Some general description abot this amazing product.</p>
+                        <h5 class="text text-success">1000 UAH
+                      <input type="button" class="btn btn-info btn-sm pull-right" value="View More">
+                    </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<!-- Product -->

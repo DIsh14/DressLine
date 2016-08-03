@@ -1,0 +1,159 @@
+<div class="container">
+
+  <div class="row">
+
+    <ul class="breadcrumb">
+      <li><a href="#/">Home</a> <span class="divider"></span></li>
+      <li><a href="">Men</a> <span class="divider"></span></li>
+      <li class="active">Current category</li>
+    </ul>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3">
+      <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href=".collapseOne"><span class="glyphicon glyphicon glyphicon-resize-full">
+                      </span>   Size</a>
+                  </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in collapseOne">
+                  <div class="panel-body">
+                    <table class="table">
+                      <tr ng-repeat="size in sizes">
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" ng-model="selectedSizes[$index]" ng-true-value="'{{size}}'" ng-false-value="'{{undefined}}'"> {{size}}
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href=".collapseTwo"><span class="glyphicon glyphicon-usd">
+                      </span>   Price</a>
+                  </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse collapseTwo">
+                  <div class="panel-body">
+                      <table class="table">
+                          <tr>
+                              <td>
+                                <div class="input-group">
+                                  <span class="input-group-addon">FROM</span>
+                                  <input type="text" class="form-control" ng-model="priceFromVal" ng-blur="finalPriceFromVal = priceFromVal">
+                                </div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                <div class="input-group">
+                                  <span class="input-group-addon"> TO </span>
+                                  <input type="text" class="form-control" ng-model="priceToVal" ng-blur="finalPriceToVal = priceToVal">
+                                </div>
+                              </td>
+                          </tr>
+
+                      </table>
+                  </div>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href=".collapseThree"><span class="glyphicon glyphicon-tag">
+                      </span>   Brand </a>
+                  </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse collapseThree">
+                  <div class="panel-body">
+                    <table class="table">
+                      <tr ng-repeat="brand in brands">
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" ng-model="selectedBrands[$index]" ng-true-value="'{{brand}}'" ng-false-value="'{{undefined}}'"> {{brand}}
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </table>
+                  </div>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" >
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href=".collapseFour"><span class="glyphicon glyphicon-adjust">
+                      </span>   Color</a>
+                  </h4>
+              </div>
+              <div id="collapseFour" class="panel-collapse collapse collapseFour">
+                  <div class="panel-body">
+                      <table class="table">
+                        <tr ng-repeat="color in colors">
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" ng-model="selectedColors[$index]" ng-true-value="'{{color}}'" ng-false-value="'{{undefined}}'"> {{color}}
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+</div>
+    <div class="col-md-9">
+      <div class="row">
+      <div class="col-sm-4" ng-repeat="product in products | filter : sizeFilter | filter : priceFilter | filter : brandFilter | filter : colorFilter">
+        <div class="card">
+          <img class="card-img-top category_product" ng-src={{product.img}} alt="Card image cap" >
+          <div class="card-block">
+            <h4 class="card-title">{{product.name + "  " + product.brand}}</h4>
+            <p class="card-text">{{product.description}}</p>
+            <h5 class="text text-success ">{{product.price}} UAH
+              <a href="#/product" class="btn btn-info btn-sm pull-right" role="button">View More</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+</div>
+
+<div class="row">
+
+<div class="col-md-9 col-md-offset-3">
+<div class="text-center">
+<nav>
+  <ul class="pagination">
+    <li><a href="" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+    <li><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><a href="">3</a></li>
+    <li><a href="">4</a></li>
+    <li><a href="">5</a></li>
+    <li><a href="">6</a></li>
+    <li><a href="" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+
+  </ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<ng-include src="'src/js/recentlyViewedItems/recentlyViewedItems.html'"></ng-include>

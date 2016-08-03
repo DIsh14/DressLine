@@ -1,0 +1,111 @@
+<div class="container">
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">Customer section</div>
+            <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation"><a href="#"><i class="fa fa-list"></i> Orders</a></li>
+                    <li role="presentation"><a href="#"><i class="fa fa-list"></i> Products</a></li>
+                    <li role="presentation"><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="well">
+            <h2>Product Managment</h2>
+            <form>
+                <div class="row">
+                    <hr>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input type="text" class="form-control" id="price" placeholder="UAH">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="productname">Product Name</label>
+                            <input type="text" class="form-control" id="productname">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="size">Size</label>
+                            <select class="form-control" id="size" placeholder="Size">
+                                <option>XS</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="hue-demo">Color</label>
+                            <!-- <input type="text" id="hue-demo" class="form-control demo" data-control="hue" value="#ff6161"> -->
+                            <select class="form-control" id="hue-demo" placeholder="Color">
+                                <option>Red</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Green</option>
+                                <option>Blue</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <input type="text" class="form-control" id="quantity">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="brand">Brand</label>
+                            <input type="text" class="form-control" id="brand">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="image">Image</label>
+                            <span class="btn btn-default btn-file">Browse <input type="file"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select class="form-control" id="category" placeholder="Category">
+                                <option>Shoes</option>
+                                <option>Clothing</option>
+                                <option>Accesories</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea rows="5" class="form-control" id="description"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                    <div class="col-sm-3 col-sm-offset-9">
+                        <div class="form-group">
+                            <a href="#/managerProducts" class="btn btn-success">Add/ Update Product</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,144 @@
+<div class="container">
+    <ng-include src="'src/js/customerSection/customerSection.html'"></ng-include>
+    <div class="col-md-9">
+        <div class="well">
+            <h1>My account</h1>
+            <p class="lead">Change your personal details or your password here.</p>
+            <h3>Change password</h3>
+            <form role="form">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="password_old">Old password</label>
+                            <input type="password" class="form-control" id="password_old">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="password_new">New password</label>
+                            <input type="password" class="form-control" id="password_new">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="password_confirm">Confirm new password</label>
+                            <input type="password" class="form-control" id="password_confirm">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <button type="supmit" class="btn btn-primary"><i class="fa fa-save"></i> Save new password</button>
+                    </div>
+                </div>
+                <hr>
+            </form>
+            <h3>Personal details</h3>
+            <form role="form">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="firstname">Firstname</label>
+                            <input type="text" class="form-control" id="firstname">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="lastname">Lastname</label>
+                            <input type="text" class="form-control" id="lastname">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <input type="text" class="form-control" id="phone">
+                        </div>
+                    </div>
+                    <div class="col-sm-6" ng-controller="DatepickerPopupDemoCtrl">
+                        <label for="datetimepicker1">Birth date</label>
+                        <div class="form-group">
+                            <div class='input-group' id='datetimepicker1'>
+                                <input type='text' class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                                <span class="input-group-btn">
+                                  <button type="button" class="btn btn-default" ng-click="open2()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h3>Address</h3>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select class="form-control" id="country">
+                                <option>Ukraine</option>
+                                <option>Poland</option>
+                                <option>Belgium</option>
+                                <option>Germany</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="region">Region</label>
+                            <input type="text" class="form-control" id="region">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="street">Street</label>
+                            <input type="text" class="form-control" id="street">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="house_num">House number</label>
+                            <input type="text" class="form-control" id="house_num">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="zip">ZIP Code</label>
+                            <input type="text" class="form-control" id="zip">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <button type="supmit" class="btn btn-primary"><i class="fa fa-save"></i> Save changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

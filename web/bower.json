@@ -1,0 +1,35 @@
+{
+  "name": "dressline-project",
+  "description": "dressline - online shop",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.6.3",
+    "jquery": "^3.1.0",
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.6",
+    "grunt": "^1.0.1",
+    "components-font-awesome": "^4.6.3",
+    "jquery-ui": "^1.12.0",
+    "angular-route": "^1.5.8",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.37",
+    "angular-bootstrap": "^2.0.0"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css",
+        "less/bootstrap.less"
+      ]
+    }
+  }
+}

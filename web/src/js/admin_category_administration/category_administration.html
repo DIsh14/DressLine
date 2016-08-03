@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">Administrator section</div>
+            <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation"><a href="#/adminCategories"><i class="fa fa-list"></i> Categories</a></li>
+                    <li role="presentation"><a href="#/adminManagers"><i class="fa fa-list"></i> Managers</a></li>
+                    <li role="presentation"><a href="#/" ng-click="logOut()"><i class="fa fa-sign-out"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="well">
+            <h1 class="cat_admin">Category management</h1>
+            <form>
+                <div class="form-group">
+                    <div class="input-group">
+                        <h4><b>Category name:</b></h4>
+                        <input type="text" required class="form-control" placeholder="e.g. T-Shirts" />
+                    </div>
+                    <div class="input-group">
+                        <h4><b>Choose parent:</b></h4>
+                        <select class="form-control">
+                            <option>Pants</option>
+                            <option>Trousers</option>
+                            <option>Shoes</option>
+                            <option>Shorts</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="text-left">
+                        <button type="submit" class="btn-primary btn-lg">Add/Update Category</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

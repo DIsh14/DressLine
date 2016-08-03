@@ -1,0 +1,26 @@
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center" >
+<h3>Recently viewed items</h3>
+<hr>
+</div>
+</div>
+<div class="row" ng-controller="recentlyViewedItemsCtrl">
+
+  <div class="col-md-3 col-sm-6" ng-repeat="product in products">
+    <div class="card">
+      <img class="card-img-top category_product" ng-src={{product.Img}} alt="Card image cap" >
+      <div class="card-block">
+        <h4 class="card-title">{{product.Name}}</h4>
+        <p class="card-text">{{product.Description}}</p>
+        <h5 class="text text-success ">{{product.Price}}
+          <a href="#/product" class="btn btn-info btn-sm pull-right" role="button">View More</a>
+        </h5>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+</div>

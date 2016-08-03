@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">Administrator section</div>
+            <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation"><a href="#/adminCategories"><i class="fa fa-list"></i> Categories</a></li>
+                    <li role="presentation"><a href="#/adminManagers"><i class="fa fa-list"></i> Managers</a></li>
+                    <li role="presentation"><a href="#/" ng-click="logOut()"><i class="fa fa-sign-out"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="well">
+            <h1>All managers</h1>
+            <hr>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Serving category</th>
+                            <th>Phone number</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th># 12</th>
+                            <td>Denys Ischenko</td>
+                            <td>Clothing</td>
+                            <td>+380682445663</td>
+                            <td><a href="#/adminAddManager" class="btn btn-primary btn-sm">Edit</a></td>
+                            <td><a href="#" class="btn btn-danger btn-sm">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <th># 13</th>
+                            <td>Bohdan Skarzgevskiy</td>
+                            <td>Shoes</td>
+                            <td>+380503217689</td>
+                            <td><a href="#/adminAddManager" class="btn btn-primary btn-sm">Edit</a></td>
+                            <td><a href="#" class="btn btn-danger btn-sm">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <th># 14</th>
+                            <td>Oleh Roshka</td>
+                            <td>Accessories</td>
+                            <td>+380983456787</td>
+                            <td><a href="#/adminAddManager" class="btn btn-primary btn-sm">Edit</a></td>
+                            <td><a href="#" class="btn btn-danger btn-sm">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-9">
+                    <a href="#/adminAddManager" class="btn btn-success">Add manager</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

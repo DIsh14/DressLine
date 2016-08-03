@@ -1,0 +1,25 @@
+/*carousel*/
+
+.slide-image {
+    width: 100%;
+}
+.carousel-holder {
+    margin-bottom: 20px;
+}
+.carousel-control, .item {
+    border-radius: 4px;
+}
+
+/*carousel*/
+
+
+/*plates*/
+
+.thumbnail img {
+    width: 100%;
+}
+.custom-thumbnail {
+    padding: 0px;
+}
+
+/*plates*/

@@ -1,0 +1,117 @@
+.dropdown-menu {
+    min-width: 200px;
+}
+.dropdown-menu.columns-2 {
+    min-width: 400px;
+}
+.dropdown-menu.columns-3 {
+    min-width: 600px;
+}
+.dropdown-menu.columns-4 {
+    min-width: 800px;
+}
+.dropdown-menu li a {
+    padding: 5px 5px;
+    font-weight: 300;
+    font-size: 12px;
+}
+.multi-column-dropdown {
+    list-style: none;
+}
+.multi-column-dropdown li a {
+    display: block;
+    clear: both;
+    line-height: 1.428571429;
+    color: #333;
+    white-space: normal;
+}
+.multi-column-dropdown li a:hover {
+    text-decoration: none;
+    color: #262626;
+    background-color: #e5e5e5;
+}
+@media screen and (max-width: 767px) {
+    li.dropdown-header {
+        color: #ffffff;
+        font-weight: bold;
+    }
+    .multi-column-dropdown li a {
+        display: block;
+        clear: both;
+        line-height: 1.428571429;
+        color: #d0e8f4;
+        white-space: normal;
+    }
+    .multi-column-dropdown li a:hover {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: transparent;
+    }
+}
+@media (max-width: 767px) {
+    .dropdown-menu.multi-column {
+        min-width: 240px !important;
+        overflow-x: hidden;
+    }
+}
+.nav-icons-xs {
+    text-align: center;
+}
+.nav-icons-xs a {
+    font-size: 10px;
+    color: #d0e8f4;
+}
+.nav-icons-xs a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+.nav-icons-lg {
+    font-size: 9px;
+}
+.navbar-header .navbar-icon {
+    line-height: 50px;
+    height: 50px;
+}
+.navbar-header a.navbar-icon {
+    padding: 0 5px;
+}
+i.custom-header-icon {
+    font-size: 12px;
+}
+i.custom {
+    font-size: 14px;
+}
+.navbar-custom {
+    background-color: #3097d1;
+    border-color: #3097d1;
+}
+.navbar-custom .navbar-nav> li> a {
+    color: #d0e8f4;
+}
+.navbar-custom .navbar-nav> li> a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}
+.navbar-custom .navbar-nav> li> a:focus {
+    background-color: #3097d1;
+}
+.navbar-custom .navbar-nav> li> a:active {
+    background-color: transparent;
+}
+.navbar-custom .navbar-brand {
+    color: #d0e8f4;
+}
+.navbar-custom .navbar-brand:hover {
+    color: #ffffff;
+}
+.navbar-custom .navbar-toggle {
+    background-color: #eeeeee;
+}
+.navbar-custom .icon-bar {
+    background-color: #3097d1;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: #3097d1;
+    border-color: #337ab7;
+}

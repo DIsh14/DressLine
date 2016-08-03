@@ -1,0 +1,23 @@
+<div class="container">
+    <ng-include src="'src/js/customerSection/customerSection.html'"></ng-include>
+    <div class="col-md-9">
+        <div class="well">
+            <h1>My wishlist</h1>
+            <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-4" ng-repeat="product in products">
+                <div class="card">
+                    <img class="card-img-top category_product" ng-src={{product.Img}} alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">{{product.Name}}</h4>
+                        <p class="card-text">{{product.Description}}</p>
+                        <h5 class="text text-success ">{{product.Price}}
+                  <a href="#/product" class="btn btn-info btn-sm pull-right" role="button">View More</a>
+                </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

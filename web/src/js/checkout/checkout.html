@@ -1,0 +1,336 @@
+<div class="container">
+    <div class="col-md-9">
+        <div class="well">
+            <form>
+                <h1>Checkout</h1>
+                <div class="row">
+				<hr>
+                    <div class="col-md-12">
+                        <div class="tabs">
+                            <ul class="nav nav-pills">
+                                <li class="active col-xs-12 col-md-3 "><a data-toggle="tab" href=".shippAdress">Shipping Information</a></li>
+                                <li class="col-xs-12 col-md-3 "><a data-toggle="tab" href=".payType">Payment Type</a></li>
+                                <li class=" col-xs-12 col-md-3 "><a data-toggle="tab" href=".productReview">Order Review</a></li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active shippAdress">
+                                    <div class="row">
+                                        <hr>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="firstname">Firstname</label>
+                                                <input type="text" class="form-control" id="firstname">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="lastname">Lastname</label>
+                                                <input type="text" class="form-control" id="lastname">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="country">Country</label>
+                                                <select class="form-control" id="country">
+                                                    <option>Ukraine</option>
+                                                    <option>Poland</option>
+                                                    <option>Belgium</option>
+                                                    <option>Germany</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="region">Region</label>
+                                                <input type="text" class="form-control" id="region">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="city">City</label>
+                                                <input type="text" class="form-control" id="city">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="street">Street</label>
+                                                <input type="text" class="form-control" id="street">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="house_num">House number</label>
+                                                <input type="text" class="form-control" id="house_num">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="zip">ZIP Code</label>
+                                                <input type="text" class="form-control" id="zip">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="country"><i class="fa fa-truck" aria-hidden="true"></i> Delivery type</label>
+                                                <select class="form-control" id="country">
+                                                    <option>UPS</option>
+                                                    <option>USPS</option>
+													<option>FEDEX</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade payType">
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="well">
+                                                <input id="id_radio1" type="radio" name="name_radio1" ng-model="content" value="id_radio1" /><span> Cash</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="well">
+                                                <input id="id_radio2" type="radio" name="name_radio1" ng-model="content" value="id_radio2" /><span> Credit card</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div ng-show="content=='id_radio1'">
+                                            <hr>
+                                            <h3>You choose to pay by cash.</h3>
+                                        </div>
+                                        <div ng-show="content=='id_radio2'">
+                                            <hr>
+                                            <ul class="nav nav-tabs">
+                                                <li class="nav-item active">
+                                                    <a class="nav-link " data-toggle="tab" href=".cardInformation" role="tab">Card Details</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href=".billingAdress" role="tab">Billing Adress</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane active cardInformation" role="tabpanel">
+                                                    <div class="row">
+                                                        <hr>
+                                                        <div class="col-sm-9">
+                                                            <div class="form-group">
+                                                                <label for="card-name">Name on card</label>
+                                                                <input type="text" class="form-control" name="card-number" id="card-name" placeholder="Card Holder's Name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-9">
+                                                            <div class="form-group">
+                                                                <label for="card-number">Card Namber</label>
+                                                                <input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <div class="form-group">
+                                                                <label for="phone">Card CVV</label>
+                                                                <input type="text" class="form-control" id="cvvCode" placeholder="Security Cod">
+                                                            </div>
+                                                        </div>
+                                                        <div class=" col-sm-offset-1 col-sm-5" ng-controller="DatepickerPopupDemoCtrl">
+                                                            <label for="datetimepicker3">Expiration Date</label>
+                                                            <div class="form-group">
+                                                                <div class='input-group' id='datetimepicker3'>
+																	<input type='text' class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+																	<span class="input-group-btn">
+																	  <button type="button" class="btn btn-default" ng-click="open2()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+																	</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane billingAdress" role="tabpanel">
+                                                    <div class="row">
+                                                        <hr>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="firstname">Firstname</label>
+                                                                <input type="text" class="form-control" id="firstname">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="lastname">Lastname</label>
+                                                                <input type="text" class="form-control" id="lastname">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="country">Country</label>
+                                                                <select class="form-control" id="country">
+                                                                    <option>Ukraine</option>
+                                                                    <option>Poland</option>
+                                                                    <option>Belgium</option>
+                                                                    <option>Germany</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="region">Region</label>
+                                                                <input type="text" class="form-control" id="region">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="city">City</label>
+                                                                <input type="text" class="form-control" id="city">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="street">Street</label>
+                                                                <input type="text" class="form-control" id="street">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="house_num">House number</label>
+                                                                <input type="text" class="form-control" id="house_num">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="zip">ZIP Code</label>
+                                                                <input type="text" class="form-control" id="zip">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade productReview">
+                                    <div class="row">
+                                        <hr>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="2">Product</th>
+                                                        <th>Quantity</th>
+                                                        <th>Unit price</th>
+                                                        <th>Discount</th>
+                                                        <th colspan="2">Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#/product"><img class="shop-cart-img" src="src/img/women_main_1.jpg "></a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#/product">White Blouse Armani</a>
+                                                        </td>
+                                                        <td>2</td>
+                                                        <td>123.00 UAH</td>
+                                                        <td>0.00 UAH</td>
+                                                        <td>246.00 UAH</td>
+                                                        <td>
+                                                            <a href=""><i class="fa fa-trash-o"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#/product"><img class="shop-cart-img" src="src/img/women_main_1.jpg"></a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#/product">White Blouse Armani</a>
+                                                        </td>
+                                                        <td>3</td>
+                                                        <td>223.00 UAH</td>
+                                                        <td>0.00 UAH</td>
+                                                        <td>446.00 UAH</td>
+                                                        <td>
+                                                            <a href=""><i class="fa fa-trash-o"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th colspan="5">Total</th>
+                                                        <th colspan="2">692.00 UAH</th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="well-footer">
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#/cart" class="btn btn-info"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Back to cart</a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-actions">
+                                <a href="#/customerOrders" class="btn btn-success col-md-3 col-md-offset-9">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Order Summ</h3>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Order Subtotal</td>
+                                <td>2000 UAH</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping and handling</td>
+                                <td>30 UAH</td>
+                            </tr>
+                            <tr class="panel-footer">
+                                <td>Total</td>
+                                <td>2030.00 UAH</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

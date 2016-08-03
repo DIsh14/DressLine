@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dresslineApp" ng-cloak>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+    <!-- endbower -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="stylesheet" href="src/css/home.css" />
+    <link rel="stylesheet" href="src/css/register.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
+    <link rel="stylesheet" href="src/css/category.css" />
+    <link rel="stylesheet" href="src/css/shopping_cart.css" />
+    <link rel="stylesheet" href="src/css/order_detail.css" />
+    <link rel="stylesheet" href="src/css/product.css" />
+    <link rel="stylesheet" href="src/css/login.css" />
+    <link rel="stylesheet" href="src/css/checkout.css" />
+    <link rel="stylesheet" href="src/css/product_managment.css" />
+
+    <style>
+        [ng\:cloak],
+        [ng-cloak],
+        .ng-cloak {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--header-->
+    <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
+        <div class="container" ng-controller="mainCtrl">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#/" class="navbar-brand">DressLine</a>
+                <div class="nav-icons-xs hidden-md hidden-lg hidden-sm">
+                    <a href="#/userProfile" class="navbar-icon" ng-if="userType == 'customer'"><i class="fa fa-user custom-header-icon" aria-hidden="true"></i></a>
+                    <a href="#/wishList" class="navbar-icon" ng-if="userType == 'customer'"><i class="fa fa-heart custom-header-icon" aria-hidden="true"></i> 1</a>
+                    <a href="#/cart" class="navbar-icon" ng-if="userType == 'customer'"><i class="fa fa-shopping-cart custom-header-icon" aria-hidden="true"></i> 1</a>
+                    <a href="#/" class="navbar-icon" ng-if="userType == 'customer'" ng-click="logOut()"><i class="fa fa-sign-out custom-header-icon" aria-hidden="true"></i></a>
+
+                    <a href="#/adminCategories" class="navbar-icon" ng-if="userType == 'admin'"><i class="fa fa-cogs custom-header-icon" aria-hidden="true"></i></a>
+                    <a href="#/" class="navbar-icon" ng-if="userType == 'admin'" ng-click="logOut()"><i class="fa fa-sign-out custom-header-icon" aria-hidden="true"></i></a>
+
+                    <a href="#/adminCategories" class="navbar-icon" ng-if="userType == 'manager'"><i class="fa fa-cogs custom-header-icon" aria-hidden="true"></i></a>
+                    <a href="#/" class="navbar-icon" ng-if="userType == 'manager'" ng-click="logOut()"><i class="fa fa-sign-out custom-header-icon" aria-hidden="true"></i></a>
+
+                    <a href="#/register" class="navbar-icon" ng-if="userType == 'unregisteredUser'"><i class="fa fa-user-plus custom-header-icon" aria-hidden="true"></i></a>
+                    <span ng-controller="ModalDemoController" ng-if="userType == 'unregisteredUser'">
+                        <script type="text/ng-template" id="myModalContent.html">
+                            <div class="loginmodal-container">
+                                <div class="modal-header">
+                                    <h1 class="modal-title text-center">Login to Your Account</h1>
+                                </div>
+                                <form>
+                                    <div class="modal-body">
+                                        <input type="text" name="user" placeholder="Username">
+                                        <input type="password" name="pass" placeholder="Password">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input type="submit" name="login" ng-click="login()" class="login loginmodal-submit" value="Login">
+                                        <div class="login-help">
+                                            <a href="#/register" ng-click="close()">Register</a> - <a href="">Forgot Password</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </script>
+                        <a href="" class="navbar-icon" ng-click="open()" title="Login"><i class="fa fa-sign-in custom-header-icon" aria-hidden="true"></i></a>
+                    </span>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="responsive-menu">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Men <b class="caret"></b></a>
+                        <ul class="dropdown-menu multi-column columns-3">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <ul class="multi-column-dropdown">
+                                        <li class="dropdown-header">Action</li>
+                                        <li class="divider"></li>
+                                        <li><a href="#/categories">Category EXAMPLE</a></li>
+                                        <li><a href="#/">Something else here</a></li>
+                                        <li><a href="#/">Separated link</a></li>
+                                        <li><a href="#/">One more separated link</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <ul class="multi-column-dropdown">
+                                        <li class="dropdown-header">Action</li>
+                                        <li class="divider"></li>
+                                        <li><a href="#/">Another action</a></li>
+                                        <li><a href="#/">Something else here</a></li>
+                                        <li><a href="#/">Separated link</a></li>
+                                        <li><a href="#/">One more separated link</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <ul class="multi-column-dropdown">
+                                        <li class="dropdown-header">Action</li>
+                                        <li class="divider"></li>
+                                        <li><a href="#/">Another action</a></li>
+                                        <li><a href="#/">Something else here</a></li>
+                                        <li><a href="#/">Separated link</a></li>
+                                        <li><a href="#/">One more separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Women <b class="caret"></b></a>
+                        <ul class="dropdown-menu multi-column columns-4">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <ul class="multi-column-dropdown">
+                                        <li class="dropdown-header">Action</li>
+                                        <li class="divider"></li>
+                                        <li><a href="#/categories">Category EXAMPLE</a></li>
+                                        <li><a href="#/">Something else here</a></li>
+                                        <li><a href="#/">Separated link</a></li>
+                                        <li><a href="#/">One more separated link</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3">
+                                    <ul class="multi-column-dropdown">
+                                        <li class="dropdown-header">Action</li>
+                                        <li class="divider"></li>
+                                        <li><a href="#/">Another action</a></li>
+                                        <li><a href="#/">Something else here</a></li>
+                                        <li><a href="#/">Separated link</a></li>
+                                        <li><a href="#/">One more separated link</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3">
+                                    <ul class="multi-column-dropdown">
+                                        <li class="dropdown-header">Action</li>
+                                        <li class="divider"></li>
+                                        <li><a href="#/">Another action</a></li>
+                                        <li><a href="#/">Something else here</a></li>
+                                        <li><a href="#/">Separated link</a></li>
+                                        <li><a href="#/">One more separated link</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3">
+                                    <ul class="multi-column-dropdown">
+                                        <li class="dropdown-header">Action</li>
+                                        <li class="divider"></li>
+                                        <li><a href="#/">Another action</a></li>
+                                        <li><a href="#/">Something else here</a></li>
+                                        <li><a href="#/">Separated link</a></li>
+                                        <li><a href="#/">One more separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Kids <b class="caret"></b></a>
+                        <ul class="dropdown-menu multi-column columns-3">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <ul class="multi-column-dropdown">
+                                        <li class="dropdown-header">Action</li>
+                                        <li class="divider"></li>
+                                        <li><a href="#/categories">Category EXAMPLE</a></li>
+                                        <li><a href="#/">Something else here</a></li>
+                                        <li><a href="#/">Separated link</a></li>
+                                        <li><a href="#/">One more separated link</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <ul class="multi-column-dropdown">
+                                        <li class="dropdown-header">Action</li>
+                                        <li class="divider"></li>
+                                        <li><a href="#/">Another action</a></li>
+                                        <li><a href="#/">Something else here</a></li>
+                                        <li><a href="#/">Separated link</a></li>
+                                        <li><a href="#/">One more separated link</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <ul class="multi-column-dropdown">
+                                        <li class="dropdown-header">Action</li>
+                                        <li class="divider"></li>
+                                        <li><a href="#/">Another action</a></li>
+                                        <li><a href="#/">Something else here</a></li>
+                                        <li><a href="#/">Separated link</a></li>
+                                        <li><a href="#/">One more separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="col-sm-3 col-md-3">
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" name="q">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="hidden-xs">
+                    <ul class="nav navbar-nav navbar-right nav-icons-lg">
+                        <li><a href="#/userProfile" data-toggle="tooltip" title="Profile" ng-if="userType == 'customer'"><i class="fa fa-user custom" aria-hidden="true"></i></a></li>
+                        <li><a href="#/wishList" data-toggle="tooltip" title="Wishlist" ng-if="userType == 'customer'"><i class="fa fa-heart custom" aria-hidden="true"></i> 1</a></li>
+                        <li><a href="#/cart" data-toggle="tooltip" title="Shopping cart" ng-if="userType == 'customer'"><i class="fa fa-shopping-cart custom" aria-hidden="true"></i> 1</a></li>
+                        <li><a href="#/" data-toggle="tooltip" title="Logout" ng-if="userType == 'customer'" ng-click="logOut()"><i class="fa fa-sign-out custom" aria-hidden="true"></i></a></li>
+
+                        <li><a href="#/adminCategories" data-toggle="tooltip" title="Management" ng-if="userType == 'admin'"><i class="fa fa-cogs custom-header-icon" aria-hidden="true"></i></a></li>
+                        <li><a href="#/" data-toggle="tooltip" title="Logout" ng-if="userType == 'admin'" ng-click="logOut()"><i class="fa fa-sign-out custom" aria-hidden="true"></i></a></li>
+
+                        <li><a href="#/managerOrders" data-toggle="tooltip" title="Management" ng-if="userType == 'manager'"><i class="fa fa-cogs custom-header-icon" aria-hidden="true"></i></a></li>
+                        <li><a href="#/" data-toggle="tooltip" title="Logout" ng-if="userType == 'manager'" ng-click="logOut()"><i class="fa fa-sign-out custom" aria-hidden="true"></i></a></li>
+
+                        <li><a href="#/register" data-toggle="tooltip" title="Registration" ng-if="userType == 'unregisteredUser'"><i class="fa fa-user-plus custom" aria-hidden="true"></i></a></li>
+                        <li ng-controller="ModalDemoController" ng-if="userType == 'unregisteredUser'">
+                            <script type="text/ng-template" id="myModalContent.html">
+                                <div class="loginmodal-container">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title text-center">Login to Your Account</h1>
+                                    </div>
+                                    <form>
+                                        <div class="modal-body">
+                                            <input type="text" name="user" placeholder="Username" ng-model="userName">
+                                            <input type="password" name="pass" placeholder="Password">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <input type="submit" name="login" ng-click="login(userName)" class="login loginmodal-submit" value="Login">
+                                            <div class="login-help">
+                                                <a href="#/register" ng-click="close()">Register</a> - <a href="">Forgot Password</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </script>
+                            <a href="" ng-click="open()" title="Login"><i class="fa fa-sign-in custom" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--header-->
+    <ng-view></ng-view>
+    <!--footer-->
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h4><strong>User section</strong></h4>
+                    <ul>
+                        <li ng-controller="ModalDemoController" ng-if="userType == 'unregisteredUser'">
+                            <script type="text/ng-template" id="myModalContent.html">
+                                <div class="loginmodal-container">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title text-center">Login to Your Account</h1>
+                                    </div>
+                                    <form>
+                                        <div class="modal-body">
+                                            <input type="text" name="user" placeholder="Username">
+                                            <input type="password" name="pass" placeholder="Password">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <input type="submit" name="login" ng-click="login()" class="login loginmodal-submit" value="Login">
+                                            <div class="login-help">
+                                                <a href="#/register" ng-click="close()">Register</a> - <a href="">Forgot Password</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </script>
+                            <a href="" ng-click="open()">Login</a>
+                        </li>
+                        <li><a href="#/register" ng-if="userType == 'unregisteredUser'">Register</a></li>
+
+                        <li><a href="#/cart" ng-if="userType == 'customer'">Shopping Cart</a></li>
+                        <li><a href="#/wishList" ng-if="userType == 'customer'">Wish List</a></li>
+                        <li><a href="#/userProfile" ng-if="userType == 'customer'">Profile</a></li>
+                        <li><a href="#/" ng-if="userType == 'customer'" ng-click="logOut()">Logout</a></li>
+                    </ul>
+                    <hr class="hidden-md hidden-lg hidden-sm hr-line-footer">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h4><a href='https://goo.gl/maps/KJCabE2Yb6K2' title="Go to map"><strong>Where to find us</strong></a></h4>
+                    <p>DressLine Company
+                        <br>2, Volodymir Velykiy Str.
+                        <br>Lviv, Ukraine</p>
+                    <hr class="hidden-md hidden-lg hidden-sm hr-line-footer">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h4><a href="#/aboutus" title="Go to contact page"><strong>How to contact us</strong></a></h4>
+                    <p><b>Email:</b> support@dressline.com
+                        <br><b>Phone:</b> +380931414141
+                        <br><b>Skype:</b> dresslineshop
+                    </p>
+                    <h4>Stay in touch</h4>
+                    <p class="social">
+                        <a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+                    </p>
+                    <hr class="hidden-md hidden-lg hidden-sm hr-line-footer">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h4><strong>Get the news</strong></h4>
+                    <p>Subscribe to our newsletter to stay up-to-date on our new collections, promotions, discounts, sales and special offers.</p>
+                    <form role="form">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="enter your e-mail here">
+                            <span class="input-group-btn">
+                                <button class="btn btn-info" type="button">Subscribe</button>
+                          </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="copyright">
+        <div class="container">
+            <div class="col-md-6">
+                <p class="pull-left">Copyright © 2016 DressLine Company. All rights reserved.</p>
+            </div>
+            <div class="col-md-6">
+                <p class="pull-right">Edvantis Bootcamp^1b</p>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
+    <script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <script src="src/js/app.js"></script>
+    <script src="src/js/home/homeController.js"></script>
+    <script src="src/js/register/registerController.js"></script>
+    <script src="src/js/categories/categoryController.js"></script>
+    <script src="src/js/shopping_cart/shoppingCartController.js"></script>
+    <script src="src/js/wishlist/wishlistController.js"></script>
+    <script src="src/js/customer_account/accountController.js"></script>
+    <script src="src/js/customer_orders/ordersController.js"></script>
+    <script src="src/js/login/ModalDemoController.js"></script>
+    <script src="src/js/login/ModalInstanceCtrl.js"></script>
+    <script src="src/js/admin_categories/adminCategoryController.js"></script>
+    <script src="src/js/admin_managers/adminManagerController.js"></script>
+    <script src="src/js/recentlyViewedItems/recentlyViewedItemsCotroller.js"></script>
+    <script src="src/js/product/productController.js"></script>
+    <script src="src/js/recentlyViewedItems/recentlyViewedItemsCotroller.js"></script>
+    <script src="src/js/order_details/orderDetailController.js"></script>
+    <script src="src/js/checkout/checkoutController.js"></script>
+    <script src="src/js/customerSection/customerSectionController.js"></script>
+    <script src="src/js/checkout/checkoutController.js"></script>
+    <script src="src/js/admin_add_manager/adminAddManagerController.js"></script>
+    <script src="src/js/admin_category_administration/adminCategoryManagementController.js"></script>
+    <script src="src/js/manager_orders/managerOrderController.js"></script>
+    <script src="src/js/manager_products/managerProductController.js"></script>
+    <script src="src/js/manager_product_management/managerProductManagementController.js"></script>
+    <script src="src/js/about_us/aboutUsController.js"></script>
+    <script type="text/javascript" src="choosePaymentType.js"></script>
+</body>
+
+</html>
